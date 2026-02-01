@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget_container"
+    style="@style/Widget.Android.AppWidget.Container"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:theme="@style/Theme.Android.AppWidgetContainer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/streak_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_recent_history"
+                android:tint="#FFFFFF"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/streak_count"
+                style="@style/Widget.Android.AppWidget.InnerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Day Streak!"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/streak_message"
+            style="@style/Widget.Android.AppWidget.InnerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Start your streak!"
+            android:textSize="14sp"
+            android:textColor="#E6FFFFFF"/>
+    </LinearLayout>
+</RelativeLayout>
